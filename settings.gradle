@@ -1,1 +1,1 @@
-include ':app', ':suanfa', ':designmode'
+include ':app', ':suanfa', ':designmode', ':leetcode'
