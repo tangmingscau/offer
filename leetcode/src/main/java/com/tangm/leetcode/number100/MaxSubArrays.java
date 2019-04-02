@@ -10,7 +10,7 @@ public class MaxSubArrays {
     static int[] a1 = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
     static int[] a2={-1};
     public static void main(String[] args) {
-        System.out.println(maxSubArray(a2));
+        System.out.println(maxSubArray(a1));
     }
 
     public static int maxSubArray(int[] nums) {
@@ -24,6 +24,7 @@ public class MaxSubArrays {
         }
         int max = nums[start];
         for (int i = 0; i < maxSums.length; i++) {
+            System.out.print(" "+maxSums[i]);
             if (max < maxSums[i]) {
                 max = maxSums[i];
             }
