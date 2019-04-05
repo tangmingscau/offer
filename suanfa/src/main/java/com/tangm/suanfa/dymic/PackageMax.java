@@ -1,4 +1,4 @@
-package com.tangm.suanfa;
+package com.tangm.suanfa.dymic;
 
 import java.util.Arrays;
 

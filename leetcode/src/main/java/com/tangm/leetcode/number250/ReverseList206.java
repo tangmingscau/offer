@@ -37,7 +37,7 @@ public class ReverseList206 {
 
     public static ListNode reverseList(ListNode head) {
         //使用栈的后进先出特性
-        if (head==null){
+        if (head == null) {
             return head;
         }
         Stack<ListNode> stack = new Stack<>();
@@ -59,16 +59,18 @@ public class ReverseList206 {
 //        }
         return nodeClone1;
     }
+
     public static ListNode reverseList2(ListNode head) {
-        //官方解答，迭代
-        ListNode prev = null;
+        //思想就是next指向之前，pre那个临时变量保存一下
+
         ListNode curr = head;
+        ListNode pre = null;
         while (curr != null) {
-            ListNode nextTemp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = nextTemp;
+            ListNode next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
         }
-        return prev;
+        return pre;
     }
 }

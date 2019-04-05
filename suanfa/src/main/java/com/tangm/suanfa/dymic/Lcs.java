@@ -1,10 +1,12 @@
-package com.tangm.suanfa;
+package com.tangm.suanfa.dymic;
 
 
 import java.util.Arrays;
 import java.util.logging.Level;
 
 /**
+ * https://www.jianshu.com/p/866c0dd53619
+ * 最长公共子序列
  * 首先定义一个给定序列的子序列，就是将给定序列中零个或多个元素去掉之后得到的结果，
  * 其形式化定义如下：给定一个序列X = <x1,x2 ,..., xm>，
  * 另一个序列Z =<z1,z2 ,..., zk> 满足如下条件时称为X的子序列，即存在一个严格递增的X的下标序列<i1,i2 ,..., ik>，
@@ -25,7 +27,7 @@ public class Lcs {
         if (a1 == null || a2 == null || a1.length == 0 || a2.length == 0) {
             return 0;
         }
-
+        //sum[i][j]的意思是子串a[i]和a[j]的最长公共子序列
         int[][] sum = new int[a1.length + 1][a2.length + 1];
         for (int i = 0; i <= a1.length; i++) {
             sum[i][0] = 0;

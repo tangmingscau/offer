@@ -6,7 +6,7 @@ package com.tangm.leetcode.number100;
  * @author tony
  * @date 2019/4/1
  */
-public class MaxSubArrays {
+public class MaxSubArrays53 {
     static int[] a1 = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
     static int[] a2={-1};
     public static void main(String[] args) {
